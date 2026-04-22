@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="24/7 AOG emergency logistics at RMO (Chișinău International Airport), Moldova. Critical aviation parts delivered fast by UniversCargo.">
+  <meta name="keywords" content="AOG Moldova, AOG RMO, aircraft on ground Chisinau, aviation logistics Moldova, emergency parts delivery">
+  <meta property="og:title" content="AOG Moldova | Emergency Aviation Logistics at RMO">
+  <meta property="og:description" content="24/7 AOG emergency response at Chișinău International Airport. Critical parts delivered fast.">
+  <title>AOG Moldova | Emergency Aviation Logistics at RMO | UniversCargo</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { 950: '#04090f', 900: '#060b18', 800: '#0a1628', 700: '#0f1f3d' },
+            brand: { orange: '#ff6b00', 'orange-light': '#ff8c00', blue: '#00b4ff', 'blue-dark': '#0099e6' }
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+
+    :root {
+      --orange:     #ff6b00;
+      --orange-lt:  #ff8c00;
+      --orange-dk:  #e55a00;
+      --blue:       #00b4ff;
+      --blue-dk:    #0099e6;
+      --navy-950:   #04090f;
+      --navy-900:   #060b18;
+      --navy-800:   #0a1628;
+      --navy-700:   #0f1f3d;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--navy-900);
+      color: #ffffff;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Hero ─────────────────────────────── */
+    .hero-section {
+      background:
+        linear-gradient(135deg,
+          rgba(4,9,15,0.97) 0%,
+          rgba(6,11,24,0.90) 40%,
+          rgba(10,22,40,0.88) 70%,
+          rgba(4,9,15,0.97) 100%
+        ),
+        url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1920&q=80')
+        center / cover no-repeat;
+      min-height: 100vh;
+    }
+
+    /* Grid overlay */
+    .grid-overlay {
+      background-image:
+        linear-gradient(rgba(0,180,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,180,255,0.025) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+
+    /* ── Buttons ──────────────────────────── */
+    .btn-orange {
+      background: linear-gradient(135deg, var(--orange), var(--orange-lt));
+      box-shadow: 0 4px 24px rgba(255,107,0,0.35);
+      color: #fff;
+      font-weight: 700;
+      border-radius: 14px;
+      transition: all 0.25s ease;
+    }
+    .btn-orange:hover {
+      background: linear-gradient(135deg, var(--orange-dk), var(--orange));
+      box-shadow: 0 8px 36px rgba(255,107,0,0.55);
+      transform: translateY(-2px);
+    }
+    .btn-blue-outline {
+      background: transparent;
+      border: 2px solid var(--blue);
+      color: var(--blue);
+      font-weight: 700;
+      border-radius: 14px;
+      transition: all 0.25s ease;
+    }
+    .btn-blue-outline:hover {
+      background: rgba(0,180,255,0.08);
+      box-shadow: 0 8px 32px rgba(0,180,255,0.25);
+      transform: translateY(-2px);
+    }
+    .btn-wa {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      border-radius: 10px;
+      transition: all 0.25s ease;
+    }
+    .btn-wa:hover { box-shadow: 0 6px 24px rgba(37,211,102,0.4); transform: translateY(-2px); }
+    .btn-tg {
+      background: linear-gradient(135deg, #2AABEE, #229ED9);
+      border-radius: 10px;
+      transition: all 0.25s ease;
+    }
+    .btn-tg:hover { box-shadow: 0 6px 24px rgba(42,171,238,0.4); transform: translateY(-2px); }
+
+    /* ── Cards ────────────────────────────── */
+    .card {
+      background: linear-gradient(135deg, rgba(15,31,61,0.75) 0%, rgba(10,22,40,0.85) 100%);
+      border: 1px solid rgba(0,180,255,0.12);
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+    .card:hover {
+      border-color: rgba(0,180,255,0.35);
+      transform: translateY(-5px);
+      box-shadow: 0 24px 48px rgba(0,0,0,0.35), 0 0 24px rgba(0,180,255,0.07);
+    }
+    .glass {
+      background: rgba(255,255,255,0.028);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.055);
+      border-radius: 16px;
+    }
+
+    /* ── Icon containers ──────────────────── */
+    .icon-wrap-orange {
+      background: rgba(255,107,0,0.10);
+      border: 1px solid rgba(255,107,0,0.20);
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .icon-wrap-blue {
+      background: rgba(0,180,255,0.10);
+      border: 1px solid rgba(0,180,255,0.20);
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* ── Trust strip ──────────────────────── */
+    .trust-strip {
+      background: linear-gradient(90deg,
+        rgba(0,180,255,0.06) 0%,
+        rgba(255,107,0,0.04) 50%,
+        rgba(0,180,255,0.06) 100%);
+      border-top: 1px solid rgba(0,180,255,0.15);
+      border-bottom: 1px solid rgba(0,180,255,0.15);
+    }
+
+    /* ── Nav ──────────────────────────────── */
+    .nav-bar {
+      backdrop-filter: blur(20px);
+      background: rgba(6,11,24,0.82);
+      border-bottom: 1px solid rgba(0,180,255,0.08);
+    }
+
+    /* ── Badges / tags ────────────────────── */
+    .section-tag {
+      display: inline-block;
+      padding: 5px 18px;
+      background: rgba(0,180,255,0.09);
+      border: 1px solid rgba(0,180,255,0.28);
+      border-radius: 9999px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--blue);
+    }
+    .urgency-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 18px;
+      background: rgba(255,107,0,0.09);
+      border: 1px solid rgba(255,107,0,0.28);
+      border-radius: 9999px;
+    }
+
+    /* ── Stat gradient text ───────────────── */
+    .stat-orange {
+      background: linear-gradient(135deg, var(--orange-lt), var(--orange));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ── Divider ──────────────────────────── */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0,180,255,0.25), transparent);
+    }
+
+    /* ── Form ─────────────────────────────── */
+    .form-field {
+      background: rgba(10,22,40,0.9);
+      border: 1px solid rgba(0,180,255,0.18);
+      border-radius: 12px;
+      color: #fff;
+      width: 100%;
+      padding: 14px 16px;
+      font-size: 14px;
+      font-family: inherit;
+      transition: border-color 0.25s, box-shadow 0.25s;
+    }
+    .form-field:focus {
+      outline: none;
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(0,180,255,0.10);
+    }
+    .form-field::placeholder { color: rgba(255,255,255,0.30); }
+
+    /* ── Scroll animations ────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Pulsing glow on CTA ──────────────── */
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 4px 24px rgba(255,107,0,0.35); }
+      50%       { box-shadow: 0 6px 40px rgba(255,107,0,0.65); }
+    }
+    .pulse-glow { animation: pulseGlow 2.2s ease-in-out infinite; }
+
+    /* ── Live dot ─────────────────────────── */
+    @keyframes livePing {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50%       { transform: scale(1.6); opacity: 0.4; }
+    }
+    .live-dot { animation: livePing 1.6s ease-in-out infinite; }
+
+    /* ── Scroll indicator ─────────────────── */
+    @keyframes bounceY {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(8px); }
+    }
+    .bounce { animation: bounceY 2s ease-in-out infinite; }
+
+    /* ── Language switcher ────────────────── */
+    .lang-btn { cursor: pointer; transition: color 0.2s; }
+    .lang-btn.active { color: var(--orange); font-weight: 800; }
+
+    /* ── Partner card ─────────────────────── */
+    .partner-card {
+      background: rgba(15,31,61,0.45);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 18px;
+      transition: all 0.3s ease;
+    }
+    .partner-card:hover {
+      background: rgba(15,31,61,0.75);
+      border-color: rgba(0,180,255,0.28);
+      transform: translateY(-4px);
+    }
+
+    /* ── Sticky mobile CTA ────────────────── */
+    .sticky-call {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
+    }
+
+    /* ── Mobile padding for sticky bar ───── */
+    @media (max-width: 767px) {
+      body { padding-bottom: 68px; }
+    }
+
+    /* ── Responsive hero font ─────────────── */
+    .hero-h1 { font-size: clamp(2rem, 6vw, 4.5rem); line-height: 1.12; font-weight: 900; }
+
+    /* ── CTA section gradient bg ──────────── */
+    .cta-section-bg {
+      background: linear-gradient(135deg,
+        rgba(255,107,0,0.055) 0%,
+        rgba(0,180,255,0.035) 100%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ══════════════════════════════════════════
+       STICKY MOBILE CALL BUTTON (bottom bar)
+       ══════════════════════════════════════════ -->
+  <div class="sticky-call md:hidden">
+    <a href="tel:+37379453303"
+       class="btn-orange flex items-center justify-center gap-3 py-[18px] w-full text-base font-bold rounded-none"
+       style="border-radius:0;">
+      <!-- Phone icon -->
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.19 18.9 19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+      </svg>
+      <span data-i18n="sticky_call">CALL NOW — AOG EMERGENCY</span>
+    </a>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════
+       NAVIGATION
+       ══════════════════════════════════════════ -->
+  <nav id="navbar" class="nav-bar fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3">
+          <div class="icon-wrap-orange w-9 h-9">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2.5">
+              <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+            </svg>
+          </div>
+          <span class="font-black text-white text-xl tracking-tight">AOG<span style="color:var(--orange);">.md</span></span>
+        </a>
+
+        <!-- Desktop nav links -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#services" class="text-sm text-gray-400 hover:text-white transition-colors" data-i18n="nav_services">Services</a>
+          <a href="#why-us"   class="text-sm text-gray-400 hover:text-white transition-colors" data-i18n="nav_why">Why Us</a>
+          <a href="#partners" class="text-sm text-gray-400 hover:text-white transition-colors" data-i18n="nav_partners">Partners</a>
+          <a href="#contact"  class="text-sm text-gray-400 hover:text-white transition-colors" data-i18n="nav_contact">Contact</a>
+          <a href="#form" class="btn-orange px-5 py-2 text-sm font-semibold" data-i18n="nav_quote">Get Quote</a>
+        </div>
+
+        <!-- Language switcher -->
+        <div class="flex items-center gap-1 text-xs font-semibold text-gray-400">
+          <button onclick="setLang('en')" id="lang-en" class="lang-btn active px-2 py-1 rounded">EN</button>
+          <span class="text-gray-700">|</span>
+          <button onclick="setLang('ru')" id="lang-ru" class="lang-btn px-2 py-1 rounded">RU</button>
+          <span class="text-gray-700">|</span>
+          <button onclick="setLang('ro')" id="lang-ro" class="lang-btn px-2 py-1 rounded">RO</button>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ══════════════════════════════════════════
+       HERO SECTION
+       ══════════════════════════════════════════ -->
+  <section class="hero-section relative flex flex-col justify-center pt-16">
+    <!-- Grid overlay -->
+    <div class="grid-overlay absolute inset-0 pointer-events-none"></div>
+
+    <!-- Ambient glows -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <div class="absolute top-1/3 right-1/3 w-[500px] h-[500px] rounded-full"
+           style="background: rgba(0,180,255,0.04); filter: blur(80px);"></div>
+      <div class="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] rounded-full"
+           style="background: rgba(255,107,0,0.05); filter: blur(80px);"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-36 relative z-10 w-full">
+      <div class="max-w-4xl">
+
+        <!-- Urgency pill -->
+        <div class="urgency-pill mb-7 reveal">
+          <span class="w-2.5 h-2.5 rounded-full live-dot" style="background:var(--orange); flex-shrink:0;"></span>
+          <span class="text-xs font-bold tracking-widest uppercase" style="color:var(--orange);"
+                data-i18n="hero_badge">24/7 AOG Emergency Response · Moldova / RMO</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="hero-h1 text-white mb-7 reveal" style="transition-delay:0.05s;">
+          <span data-i18n="hero_h1a">Aircraft on Ground</span><br>
+          <span style="color:var(--orange);" data-i18n="hero_h1b">in Moldova (RMO)?</span><br>
+          <span data-i18n="hero_h1c">We Move Critical Parts</span>
+          <span style="color:var(--blue);" data-i18n="hero_h1d"> FAST.</span>
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-2xl mb-10 reveal" style="transition-delay:0.1s;"
+           data-i18n="hero_sub">
+          24/7 rapid AOG response at Chișinău International Airport (RMO) and globally.
+          We handle critical shipments when every minute counts.
+        </p>
+
+        <!-- Primary CTAs -->
+        <div class="flex flex-col sm:flex-row gap-4 mb-10 reveal" style="transition-delay:0.15s;">
+          <a href="tel:+37379453303"
+             class="btn-orange pulse-glow inline-flex items-center justify-center gap-3 px-8 py-4 text-lg">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.19 18.9 19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <span data-i18n="cta_call">Call Now</span>
+          </a>
+          <a href="#form"
+             class="btn-blue-outline inline-flex items-center justify-center gap-3 px-8 py-4 text-lg">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
+            </svg>
+            <span data-i18n="cta_quote">Get Urgent Quote</span>
+          </a>
+        </div>
+
+        <!-- Secondary channels -->
+        <div class="flex flex-wrap items-center gap-3 reveal" style="transition-delay:0.2s;">
+          <a href="https://wa.me/37379453303" target="_blank" rel="noopener"
+             class="btn-wa inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            WhatsApp
+          </a>
+          <a href="https://t.me/37379453303" target="_blank" rel="noopener"
+             class="btn-tg inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+            </svg>
+            Telegram
+          </a>
+          <a href="mailto:info@universcargo.md"
+             class="text-sm text-gray-500 hover:text-gray-300 transition-colors hidden sm:block">
+            info@universcargo.md
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 bounce">
+      <span class="text-gray-600 text-[10px] tracking-widest uppercase font-semibold">Scroll</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(0,180,255,0.4)" stroke-width="2">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════
+       TRUST STRIP
+       ══════════════════════════════════════════ -->
+  <div class="trust-strip py-7 md:py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+        <div class="reveal flex items-center gap-4 justify-center md:justify-start">
+          <div class="icon-wrap-orange w-12 h-12">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <div>
+            <div class="stat-orange text-2xl font-black">24/7</div>
+            <div class="text-gray-400 text-sm mt-0.5" data-i18n="trust_1">Availability</div>
+          </div>
+        </div>
+
+        <div class="reveal flex items-center gap-4 justify-center md:justify-start" style="transition-delay:.08s;">
+          <div class="icon-wrap-blue w-12 h-12">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00b4ff" stroke-width="2">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+          </div>
+          <div>
+            <div class="text-2xl font-black text-white">&lt;2h</div>
+            <div class="text-gray-400 text-sm mt-0.5" data-i18n="trust_2">Response Time</div>
+          </div>
+        </div>
+
+        <div class="reveal flex items-center gap-4 justify-center md:justify-start" style="transition-delay:.16s;">
+          <div class="icon-wrap-orange w-12 h-12">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="text-2xl font-black text-white">120+</div>
+            <div class="text-gray-400 text-sm mt-0.5" data-i18n="trust_3">Countries</div>
+          </div>
+        </div>
+
+        <div class="reveal flex items-center gap-4 justify-center md:justify-start" style="transition-delay:.24s;">
+          <div class="icon-wrap-blue w-12 h-12">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00b4ff" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="stat-orange text-2xl font-black">AOG</div>
+            <div class="text-gray-400 text-sm mt-0.5" data-i18n="trust_4">Certified Handling</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════
+       SERVICES SECTION
+       ══════════════════════════════════════════ -->
+  <section id="services" class="py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-16 reveal">
+        <div class="section-tag mb-5" data-i18n="services_tag">Our Services</div>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4" data-i18n="services_title">
+          AOG Solutions for Moldova &amp; Beyond
+        </h2>
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto" data-i18n="services_sub">
+          Specialized emergency logistics with deep expertise at RMO and across Eastern Europe.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Card 1 -->
+        <div class="card p-7 reveal">
+          <div class="icon-wrap-orange w-14 h-14 mb-5">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2">
+              <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+            </svg>
+          </div>
+          <span class="inline-block px-2.5 py-1 rounded-md text-[11px] font-bold mb-3"
+                style="background:rgba(255,107,0,0.10); color:var(--orange);"
+                data-i18n="s1_badge">RMO Priority</span>
+          <h3 class="text-lg font-bold text-white mb-2" data-i18n="s1_title">AOG Logistics at RMO</h3>
+          <p class="text-gray-400 text-sm leading-relaxed" data-i18n="s1_desc">
+            Dedicated AOG handling at Chișinău International Airport. Direct coordination with ground services — zero-delay part delivery.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card p-7 reveal" style="transition-delay:.09s;">
+          <div class="icon-wrap-blue w-14 h-14 mb-5">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#00b4ff" stroke-width="2">
+              <line x1="22" y1="2" x2="11" y2="13"/>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+          </div>
+          <span class="inline-block px-2.5 py-1 rounded-md text-[11px] font-bold mb-3"
+                style="background:rgba(0,180,255,0.10); color:var(--blue);"
+                data-i18n="s2_badge">Worldwide</span>
+          <h3 class="text-lg font-bold text-white mb-2" data-i18n="s2_title">Express Air Freight</h3>
+          <p class="text-gray-400 text-sm leading-relaxed" data-i18n="s2_desc">
+            Next-flight-out shipping for critical aviation parts globally. Our network ensures the fastest air routes to Moldova.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card p-7 reveal" style="transition-delay:.18s;">
+          <div class="icon-wrap-orange w-14 h-14 mb-5">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2">
+              <rect x="1" y="3" width="15" height="13"/>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+              <circle cx="5.5" cy="18.5" r="2.5"/>
+              <circle cx="18.5" cy="18.5" r="2.5"/>
+            </svg>
+          </div>
+          <span class="inline-block px-2.5 py-1 rounded-md text-[11px] font-bold mb-3"
+                style="background:rgba(255,107,0,0.10); color:var(--orange);"
+                data-i18n="s3_badge">EU–Moldova</span>
+          <h3 class="text-lg font-bold text-white mb-2" data-i18n="s3_title">Dedicated Road Transport</h3>
+          <p class="text-gray-400 text-sm leading-relaxed" data-i18n="s3_desc">
+            Door-to-airport road transport on EU–Moldova corridors. Secure, tracked, and expedited for AOG urgency.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card p-7 reveal" style="transition-delay:.27s;">
+          <div class="icon-wrap-blue w-14 h-14 mb-5">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#00b4ff" stroke-width="2">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <span class="inline-block px-2.5 py-1 rounded-md text-[11px] font-bold mb-3"
+                style="background:rgba(0,180,255,0.10); color:var(--blue);"
+                data-i18n="s4_badge">Hand Carry</span>
+          <h3 class="text-lg font-bold text-white mb-2" data-i18n="s4_title">On-board Courier</h3>
+          <p class="text-gray-400 text-sm leading-relaxed" data-i18n="s4_desc">
+            A dedicated courier physically accompanies your critical part on the aircraft. Maximum security, no delays.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider max-w-6xl mx-auto px-8"></div>
+
+
+  <!-- ══════════════════════════════════════════
+       WHY CHOOSE US
+       ══════════════════════════════════════════ -->
+  <section id="why-us" class="py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+        <!-- Left: reasons -->
+        <div>
+          <div class="section-tag mb-5 reveal" data-i18n="why_tag">Why UniversCargo</div>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-5 reveal" style="transition-delay:.06s;">
+            <span data-i18n="why_h2a">Minutes Matter.</span><br>
+            <span style="color:var(--orange);" data-i18n="why_h2b">We Know It.</span>
+          </h2>
+          <p class="text-gray-400 text-lg mb-8 reveal" style="transition-delay:.12s;" data-i18n="why_sub">
+            When an aircraft is grounded, every hour costs thousands.
+            Our team reacts immediately, communicates directly, and delivers results.
+          </p>
+
+          <div class="space-y-4">
+
+            <div class="glass p-5 flex items-start gap-4 reveal" style="transition-delay:.18s;">
+              <div class="icon-wrap-orange w-11 h-11">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2.5">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-white mb-1" data-i18n="why1_t">Instant Reaction</h4>
+                <p class="text-gray-400 text-sm" data-i18n="why1_d">Response in minutes, not hours. Our AOG desk is on standby every hour of every day.</p>
+              </div>
+            </div>
+
+            <div class="glass p-5 flex items-start gap-4 reveal" style="transition-delay:.24s;">
+              <div class="icon-wrap-blue w-11 h-11">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00b4ff" stroke-width="2.5">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                  <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-white mb-1" data-i18n="why2_t">Flexible Solutions</h4>
+                <p class="text-gray-400 text-sm" data-i18n="why2_d">Air, road, courier — we choose the fastest route, not the cheapest. Every AOG is unique.</p>
+              </div>
+            </div>
+
+            <div class="glass p-5 flex items-start gap-4 reveal" style="transition-delay:.30s;">
+              <div class="icon-wrap-orange w-11 h-11">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2.5">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.19 18.9 19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-white mb-1" data-i18n="why3_t">Direct Communication</h4>
+                <p class="text-gray-400 text-sm" data-i18n="why3_d">One dedicated expert. No call centers, no transfers. Always reachable, always accountable.</p>
+              </div>
+            </div>
+
+            <div class="glass p-5 flex items-start gap-4 reveal" style="transition-delay:.36s;">
+              <div class="icon-wrap-blue w-11 h-11">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00b4ff" stroke-width="2.5">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-white mb-1" data-i18n="why4_t">Expert Team</h4>
+                <p class="text-gray-400 text-sm" data-i18n="why4_d">Aviation logistics veterans with years of AOG experience at RMO and across Europe.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: stat card -->
+        <div class="reveal" style="transition-delay:.12s;">
+          <div class="card p-9 md:p-12 space-y-8">
+
+            <div class="text-center">
+              <div class="stat-orange text-7xl font-black mb-2">98%</div>
+              <p class="text-gray-300 font-semibold text-lg" data-i18n="stat_1">On-time AOG Delivery Rate</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="grid grid-cols-2 gap-6 text-center">
+              <div>
+                <div class="text-4xl font-black text-white mb-1">500+</div>
+                <p class="text-gray-400 text-sm" data-i18n="stat_2">AOG Cases Handled</p>
+              </div>
+              <div>
+                <div class="text-4xl font-black text-white mb-1">10+</div>
+                <p class="text-gray-400 text-sm" data-i18n="stat_3">Years of Experience</p>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="flex items-center justify-center gap-3">
+              <span class="w-3 h-3 rounded-full bg-green-400 live-dot flex-shrink-0"></span>
+              <span class="text-green-400 font-bold" data-i18n="stat_4">AOG Team Online Now</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider max-w-6xl mx-auto px-8"></div>
+
+
+  <!-- ══════════════════════════════════════════
+       PARTNERS SECTION
+       ══════════════════════════════════════════ -->
+  <section id="partners" class="py-20 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-12 reveal">
+        <div class="section-tag mb-5" data-i18n="partners_tag">Trusted By</div>
+        <h2 class="text-2xl md:text-3xl font-black text-white" data-i18n="partners_title">Airlines We've Supported</h2>
+      </div>
+
+      <div class="grid grid-cols-3 gap-4 md:gap-6 max-w-xl mx-auto">
+
+        <div class="partner-card flex flex-col items-center justify-center py-8 px-4 gap-2 reveal">
+          <div class="text-3xl font-black text-white">Sky<span style="color:var(--orange);">Up</span></div>
+          <div class="text-[10px] text-gray-500 font-bold uppercase tracking-widest">Ukraine</div>
+        </div>
+
+        <div class="partner-card flex flex-col items-center justify-center py-8 px-4 gap-2 reveal" style="transition-delay:.1s;">
+          <div class="text-2xl font-black" style="color:#FF6900;">Wizz<span class="text-gray-200">Air</span></div>
+          <div class="text-[10px] text-gray-500 font-bold uppercase tracking-widest">Europe</div>
+        </div>
+
+        <div class="partner-card flex flex-col items-center justify-center py-8 px-4 gap-2 reveal" style="transition-delay:.2s;">
+          <div class="text-2xl font-black text-white">LOT<span style="color:var(--blue);"> ✈</span></div>
+          <div class="text-[10px] text-gray-500 font-bold uppercase tracking-widest">Poland</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider max-w-6xl mx-auto px-8"></div>
+
+
+  <!-- ══════════════════════════════════════════
+       CTA SECTION — HIGH PRIORITY
+       ══════════════════════════════════════════ -->
+  <section id="contact" class="cta-section-bg py-24 md:py-32">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+      <div class="reveal">
+        <div class="urgency-pill mb-7 mx-auto" style="width:fit-content;">
+          <span class="w-2.5 h-2.5 rounded-full live-dot" style="background:var(--orange); flex-shrink:0;"></span>
+          <span class="text-xs font-bold tracking-widest uppercase" style="color:var(--orange);"
+                data-i18n="cta_badge">AOG Hotline Active</span>
+        </div>
+
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-5 leading-tight">
+          <span data-i18n="cta_h2a">Need Immediate AOG Support</span><br>
+          <span style="color:var(--orange);" data-i18n="cta_h2b">in Moldova or at RMO?</span>
+        </h2>
+
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto mb-12" data-i18n="cta_sub">
+          Don't wait. Every minute an aircraft is grounded costs money.
+          Contact our AOG team now for an immediate response.
+        </p>
+      </div>
+
+      <!-- 4 contact method cards -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12 reveal" style="transition-delay:.08s;">
+
+        <a href="tel:+37379453303"
+           class="card p-6 flex flex-col items-center gap-3 hover:scale-105 transition-transform group">
+          <div class="icon-wrap-orange w-12 h-12">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2.5">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.19 18.9 19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </div>
+          <div class="text-[11px] text-gray-500 uppercase tracking-wider font-semibold" data-i18n="cc_phone">Phone</div>
+          <div class="font-bold text-white text-sm group-hover:text-orange-400 transition-colors">+373 79 453 303</div>
+        </a>
+
+        <a href="mailto:info@universcargo.md"
+           class="card p-6 flex flex-col items-center gap-3 hover:scale-105 transition-transform group">
+          <div class="icon-wrap-blue w-12 h-12">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00b4ff" stroke-width="2.5">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <div class="text-[11px] text-gray-500 uppercase tracking-wider font-semibold" data-i18n="cc_email">Email</div>
+          <div class="font-bold text-white text-sm group-hover:text-blue-400 transition-colors">info@universcargo.md</div>
+        </a>
+
+        <a href="https://wa.me/37379453303" target="_blank" rel="noopener"
+           class="card p-6 flex flex-col items-center gap-3 hover:scale-105 transition-transform group">
+          <div class="w-12 h-12 flex items-center justify-center"
+               style="background:rgba(37,211,102,0.10); border:1px solid rgba(37,211,102,0.22); border-radius:14px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#25D366">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+          </div>
+          <div class="text-[11px] text-gray-500 uppercase tracking-wider font-semibold">WhatsApp</div>
+          <div class="font-bold text-white text-sm group-hover:text-green-400 transition-colors">+373 79 453 303</div>
+        </a>
+
+        <a href="https://t.me/37379453303" target="_blank" rel="noopener"
+           class="card p-6 flex flex-col items-center gap-3 hover:scale-105 transition-transform group">
+          <div class="w-12 h-12 flex items-center justify-center"
+               style="background:rgba(42,171,238,0.10); border:1px solid rgba(42,171,238,0.22); border-radius:14px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#2AABEE">
+              <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+            </svg>
+          </div>
+          <div class="text-[11px] text-gray-500 uppercase tracking-wider font-semibold">Telegram</div>
+          <div class="font-bold text-white text-sm group-hover:text-blue-400 transition-colors">+373 79 453 303</div>
+        </a>
+
+      </div>
+
+      <!-- Big CTA button -->
+      <a href="tel:+37379453303"
+         class="btn-orange pulse-glow inline-flex items-center gap-4 px-10 py-5 text-xl font-black reveal"
+         style="transition-delay:.16s;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.19 18.9 19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        <span data-i18n="cta_btn_main">CALL AOG HOTLINE NOW</span>
+      </a>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════
+       QUICK FORM
+       ══════════════════════════════════════════ -->
+  <section id="form" class="py-24 md:py-32">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6">
+
+      <div class="text-center mb-12 reveal">
+        <div class="section-tag mb-5" data-i18n="form_tag">Quick Contact</div>
+        <h2 class="text-3xl md:text-4xl font-black text-white mb-3" data-i18n="form_h2">Get Urgent Quote</h2>
+        <p class="text-gray-400" data-i18n="form_sub">Fill in your details — our AOG team responds within minutes.</p>
+      </div>
+
+      <div class="card p-8 md:p-10 reveal" style="transition-delay:.08s;">
+
+        <!-- The form -->
+        <form id="aog-form" onsubmit="handleSubmit(event)" class="space-y-5">
+
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-sm font-semibold text-gray-300 mb-2" data-i18n="f_name">Full Name *</label>
+              <input type="text" required autocomplete="name"
+                     class="form-field" data-i18n-ph="f_name_ph" placeholder="John Smith">
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-gray-300 mb-2" data-i18n="f_company">Company *</label>
+              <input type="text" required autocomplete="organization"
+                     class="form-field" data-i18n-ph="f_company_ph" placeholder="Airline / Operator">
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-sm font-semibold text-gray-300 mb-2" data-i18n="f_email">Email *</label>
+              <input type="email" required autocomplete="email"
+                     class="form-field" data-i18n-ph="f_email_ph" placeholder="ops@airline.com">
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-gray-300 mb-2" data-i18n="f_phone">Phone / WhatsApp *</label>
+              <input type="tel" required autocomplete="tel"
+                     class="form-field" data-i18n-ph="f_phone_ph" placeholder="+1 234 567 8900">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold text-gray-300 mb-2" data-i18n="f_details">Shipment Details *</label>
+            <textarea required rows="4" class="form-field resize-none"
+                      data-i18n-ph="f_details_ph"
+                      placeholder="Aircraft type, part number, origin, destination, urgency level…"></textarea>
+          </div>
+
+          <button type="submit"
+                  class="btn-orange w-full py-4 text-lg flex items-center justify-center gap-3">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="22" y1="2" x2="11" y2="13"/>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+            <span data-i18n="f_submit">Send Urgent Request</span>
+          </button>
+
+          <p class="text-center text-gray-600 text-xs leading-relaxed" data-i18n="f_privacy">
+            By submitting you agree to be contacted by our AOG team. Data handled confidentially.
+          </p>
+
+        </form>
+
+        <!-- Success state -->
+        <div id="form-success" class="hidden text-center py-10">
+          <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5"
+               style="background:rgba(34,197,94,0.10); border:1px solid rgba(34,197,94,0.28);">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2" data-i18n="f_ok_title">Request Received!</h3>
+          <p class="text-gray-400" data-i18n="f_ok_sub">Our AOG team will contact you within minutes.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+       ══════════════════════════════════════════ -->
+  <footer style="border-top:1px solid rgba(0,180,255,0.09); background:rgba(4,9,15,0.97);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+
+      <div class="grid md:grid-cols-3 gap-10 mb-10">
+
+        <!-- Brand -->
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="icon-wrap-orange w-9 h-9">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2.5">
+                <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+              </svg>
+            </div>
+            <span class="font-black text-white text-xl">AOG<span style="color:var(--orange);">.md</span></span>
+          </div>
+          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="footer_desc">
+            Emergency AOG logistics for Moldova and Eastern Europe.
+            Available 24/7 at Chișinău International Airport (RMO).
+          </p>
+        </div>
+
+        <!-- Quick links -->
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-widest mb-5" data-i18n="footer_links_h">Quick Links</h4>
+          <ul class="space-y-2.5">
+            <li><a href="#services" class="text-gray-500 hover:text-white text-sm transition-colors" data-i18n="footer_l1">Services</a></li>
+            <li><a href="#why-us"  class="text-gray-500 hover:text-white text-sm transition-colors" data-i18n="footer_l2">Why Choose Us</a></li>
+            <li><a href="#contact" class="text-gray-500 hover:text-white text-sm transition-colors" data-i18n="footer_l3">Contact</a></li>
+            <li>
+              <a href="https://universcargo.md" target="_blank" rel="noopener"
+                 class="text-sm transition-colors" style="color:var(--blue);">
+                UniversCargo.md ↗
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Emergency contact -->
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-widest mb-5" data-i18n="footer_emrg_h">AOG Emergency</h4>
+          <div class="space-y-3">
+            <a href="tel:+37379453303"
+               class="flex items-center gap-3 text-gray-400 hover:text-white text-sm transition-colors">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.19 18.9 19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              +373 79 453 303
+            </a>
+            <a href="mailto:info@universcargo.md"
+               class="flex items-center gap-3 text-gray-400 hover:text-white text-sm transition-colors">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#00b4ff" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              info@universcargo.md
+            </a>
+            <a href="https://wa.me/37379453303" target="_blank" rel="noopener"
+               class="flex items-center gap-3 text-gray-400 hover:text-white text-sm transition-colors">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="#25D366">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              WhatsApp
+            </a>
+            <a href="https://t.me/37379453303" target="_blank" rel="noopener"
+               class="flex items-center gap-3 text-gray-400 hover:text-white text-sm transition-colors">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="#2AABEE">
+                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+              </svg>
+              Telegram
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="divider mb-7"></div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p class="text-gray-600 text-sm">
+          <span data-i18n="footer_operated">Operated by</span>
+          <a href="https://universcargo.md" target="_blank" rel="noopener"
+             class="text-gray-400 hover:text-white transition-colors ml-1">UniversCargo</a>
+          <span class="text-gray-700 mx-1">·</span>
+          <span class="text-gray-600">Moldova</span>
+        </p>
+        <p class="text-gray-700 text-sm" data-i18n="footer_copy">© 2024 aog.md · All Rights Reserved</p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ══════════════════════════════════════════
+       JAVASCRIPT
+       ══════════════════════════════════════════ -->
+  <script>
+  // ─────────────────────────────────────────────
+  //  TRANSLATIONS
+  // ─────────────────────────────────────────────
+  const T = {
+    en: {
+      sticky_call: 'CALL NOW — AOG EMERGENCY',
+      nav_services: 'Services', nav_why: 'Why Us', nav_partners: 'Partners',
+      nav_contact: 'Contact', nav_quote: 'Get Quote',
+      hero_badge: '24/7 AOG Emergency Response · Moldova / RMO',
+      hero_h1a: 'Aircraft on Ground', hero_h1b: 'in Moldova (RMO)?',
+      hero_h1c: 'We Move Critical Parts', hero_h1d: ' FAST.',
+      hero_sub: '24/7 rapid AOG response at Chișinău International Airport (RMO) and globally. We handle critical shipments when every minute counts.',
+      cta_call: 'Call Now', cta_quote: 'Get Urgent Quote',
+      trust_1: 'Availability', trust_2: 'Response Time',
+      trust_3: 'Countries', trust_4: 'Certified Handling',
+      services_tag: 'Our Services',
+      services_title: 'AOG Solutions for Moldova & Beyond',
+      services_sub: 'Specialized emergency logistics with deep expertise at RMO and across Eastern Europe.',
+      s1_badge: 'RMO Priority', s1_title: 'AOG Logistics at RMO',
+      s1_desc: 'Dedicated AOG handling at Chișinău International Airport. Direct coordination with ground services — zero-delay part delivery.',
+      s2_badge: 'Worldwide', s2_title: 'Express Air Freight',
+      s2_desc: 'Next-flight-out shipping for critical aviation parts globally. Our network ensures the fastest air routes to Moldova.',
+      s3_badge: 'EU–Moldova', s3_title: 'Dedicated Road Transport',
+      s3_desc: 'Door-to-airport road transport on EU–Moldova corridors. Secure, tracked, and expedited for AOG urgency.',
+      s4_badge: 'Hand Carry', s4_title: 'On-board Courier',
+      s4_desc: 'A dedicated courier physically accompanies your critical part on the aircraft. Maximum security, no delays.',
+      why_tag: 'Why UniversCargo',
+      why_h2a: 'Minutes Matter.', why_h2b: 'We Know It.',
+      why_sub: 'When an aircraft is grounded, every hour costs thousands. Our team reacts immediately, communicates directly, and delivers results.',
+      why1_t: 'Instant Reaction', why1_d: 'Response in minutes, not hours. Our AOG desk is on standby every hour of every day.',
+      why2_t: 'Flexible Solutions', why2_d: 'Air, road, courier — we choose the fastest route, not the cheapest. Every AOG is unique.',
+      why3_t: 'Direct Communication', why3_d: 'One dedicated expert. No call centers, no transfers. Always reachable, always accountable.',
+      why4_t: 'Expert Team', why4_d: 'Aviation logistics veterans with years of AOG experience at RMO and across Europe.',
+      stat_1: 'On-time AOG Delivery Rate', stat_2: 'AOG Cases Handled',
+      stat_3: 'Years of Experience', stat_4: 'AOG Team Online Now',
+      partners_tag: 'Trusted By', partners_title: "Airlines We've Supported",
+      cta_badge: 'AOG Hotline Active',
+      cta_h2a: 'Need Immediate AOG Support', cta_h2b: 'in Moldova or at RMO?',
+      cta_sub: "Don't wait. Every minute an aircraft is grounded costs money. Contact our AOG team now for an immediate response.",
+      cc_phone: 'Phone', cc_email: 'Email',
+      cta_btn_main: 'CALL AOG HOTLINE NOW',
+      form_tag: 'Quick Contact', form_h2: 'Get Urgent Quote',
+      form_sub: 'Fill in your details — our AOG team responds within minutes.',
+      f_name: 'Full Name *', f_company: 'Company *',
+      f_email: 'Email *', f_phone: 'Phone / WhatsApp *', f_details: 'Shipment Details *',
+      f_name_ph: 'John Smith', f_company_ph: 'Airline / Operator',
+      f_email_ph: 'ops@airline.com', f_phone_ph: '+1 234 567 8900',
+      f_details_ph: 'Aircraft type, part number, origin, destination, urgency level…',
+      f_submit: 'Send Urgent Request',
+      f_privacy: 'By submitting you agree to be contacted by our AOG team. Data handled confidentially.',
+      f_ok_title: 'Request Received!', f_ok_sub: 'Our AOG team will contact you within minutes.',
+      footer_desc: 'Emergency AOG logistics for Moldova and Eastern Europe. Available 24/7 at Chișinău International Airport (RMO).',
+      footer_links_h: 'Quick Links', footer_l1: 'Services', footer_l2: 'Why Choose Us',
+      footer_l3: 'Contact', footer_emrg_h: 'AOG Emergency',
+      footer_operated: 'Operated by', footer_copy: '© 2024 aog.md · All Rights Reserved',
+    },
+
+    ru: {
+      sticky_call: 'ПОЗВОНИТЬ — ЭКСТРЕННЫЙ АОГ',
+      nav_services: 'Услуги', nav_why: 'О нас', nav_partners: 'Партнёры',
+      nav_contact: 'Контакты', nav_quote: 'Запрос',
+      hero_badge: 'Круглосуточное реагирование АОГ · Молдова / RMO',
+      hero_h1a: 'Воздушное судно на земле', hero_h1b: 'в Молдове (RMO)?',
+      hero_h1c: 'Доставим критические запчасти', hero_h1d: ' БЫСТРО.',
+      hero_sub: 'Круглосуточное АОГ-реагирование в международном аэропорту Кишинёва (RMO) и по всему миру. Управляем критическими отправками, когда каждая минута на счету.',
+      cta_call: 'Позвонить', cta_quote: 'Срочный запрос',
+      trust_1: 'Доступность', trust_2: 'Время реакции',
+      trust_3: 'Стран', trust_4: 'Сертифицированная обработка',
+      services_tag: 'Наши услуги',
+      services_title: 'АОГ-решения для Молдовы и за её пределами',
+      services_sub: 'Специализированные экстренные логистические услуги с экспертизой в RMO и по всей Восточной Европе.',
+      s1_badge: 'Приоритет RMO', s1_title: 'АОГ логистика в RMO',
+      s1_desc: 'Специализированная АОГ-обработка в международном аэропорту Кишинёва. Прямая координация с наземными службами — доставка деталей без задержек.',
+      s2_badge: 'Весь мир', s2_title: 'Экспресс авиагрузы',
+      s2_desc: 'Отправка следующим рейсом для критических авиазапчастей по всему миру. Самые быстрые маршруты в Молдову.',
+      s3_badge: 'ЕС–Молдова', s3_title: 'Выделенный автотранспорт',
+      s3_desc: 'Прямая доставка от двери до аэропорта по коридорам ЕС–Молдова. Безопасно, отслеживаемо, ускоренно.',
+      s4_badge: 'Ручная кладь', s4_title: 'Курьер на борту',
+      s4_desc: 'Курьер лично сопровождает вашу критическую деталь на борту самолёта. Максимальная безопасность, без задержек.',
+      why_tag: 'Почему UniversCargo',
+      why_h2a: 'Минуты имеют значение.', why_h2b: 'Мы это знаем.',
+      why_sub: 'Когда воздушное судно приземлено, каждый час стоит тысячи. Наша команда реагирует немедленно, общается напрямую и добивается результата.',
+      why1_t: 'Мгновенная реакция', why1_d: 'Ответ за минуты, не часы. Наша АОГ-команда дежурит круглосуточно.',
+      why2_t: 'Гибкие решения', why2_d: 'Авиа, авто, курьер — выбираем самый быстрый маршрут. Индивидуальный подход к каждой ситуации.',
+      why3_t: 'Прямое общение', why3_d: 'Один выделенный эксперт. Без колл-центров, без переключений. Всегда доступен.',
+      why4_t: 'Опытная команда', why4_d: 'Опытные специалисты по авиационной логистике с многолетним опытом в RMO и по всей Европе.',
+      stat_1: 'Своевременная доставка АОГ', stat_2: 'АОГ-кейсов обработано',
+      stat_3: 'Лет опыта', stat_4: 'Команда АОГ онлайн сейчас',
+      partners_tag: 'Нам доверяют', partners_title: 'Авиакомпании, которым мы помогли',
+      cta_badge: 'Горячая линия АОГ активна',
+      cta_h2a: 'Нужна срочная поддержка АОГ', cta_h2b: 'в Молдове или в RMO?',
+      cta_sub: 'Не ждите. Каждая минута простоя стоит денег. Свяжитесь с нашей командой прямо сейчас.',
+      cc_phone: 'Телефон', cc_email: 'Email',
+      cta_btn_main: 'ПОЗВОНИТЬ НА ГОРЯЧУЮ ЛИНИЮ АОГ',
+      form_tag: 'Быстрый контакт', form_h2: 'Получить срочную цену',
+      form_sub: 'Заполните форму — наша команда ответит в течение нескольких минут.',
+      f_name: 'Полное имя *', f_company: 'Компания *',
+      f_email: 'Email *', f_phone: 'Телефон / WhatsApp *', f_details: 'Детали отправки *',
+      f_name_ph: 'Иван Петров', f_company_ph: 'Авиакомпания / Оператор',
+      f_email_ph: 'ops@airline.com', f_phone_ph: '+7 000 000 0000',
+      f_details_ph: 'Тип ВС, номер детали, откуда, куда, уровень срочности…',
+      f_submit: 'Отправить срочный запрос',
+      f_privacy: 'Отправляя форму, вы соглашаетесь на контакт нашей команды. Данные конфиденциальны.',
+      f_ok_title: 'Запрос получен!', f_ok_sub: 'Наша команда АОГ свяжется с вами в течение нескольких минут.',
+      footer_desc: 'Экстренная АОГ-логистика для Молдовы и Восточной Европы. Доступны 24/7 в международном аэропорту Кишинёва (RMO).',
+      footer_links_h: 'Быстрые ссылки', footer_l1: 'Услуги', footer_l2: 'Почему мы',
+      footer_l3: 'Контакты', footer_emrg_h: 'Экстренный АОГ',
+      footer_operated: 'Работает под управлением', footer_copy: '© 2024 aog.md · Все права защищены',
+    },
+
+    ro: {
+      sticky_call: 'SUNĂ ACUM — URGENȚĂ AOG',
+      nav_services: 'Servicii', nav_why: 'De ce noi', nav_partners: 'Parteneri',
+      nav_contact: 'Contact', nav_quote: 'Ofertă',
+      hero_badge: 'Răspuns AOG 24/7 · Moldova / RMO',
+      hero_h1a: 'Aeronavă la sol', hero_h1b: 'în Moldova (RMO)?',
+      hero_h1c: 'Transportăm piese critice', hero_h1d: ' RAPID.',
+      hero_sub: 'Răspuns AOG 24/7 la Aeroportul Internațional Chișinău (RMO) și la nivel global. Gestionăm expediții critice când fiecare minut contează.',
+      cta_call: 'Sună Acum', cta_quote: 'Ofertă Urgentă',
+      trust_1: 'Disponibilitate', trust_2: 'Timp de Răspuns',
+      trust_3: 'Țări', trust_4: 'Manipulare Certificată',
+      services_tag: 'Serviciile Noastre',
+      services_title: 'Soluții AOG pentru Moldova și dincolo',
+      services_sub: 'Servicii logistice de urgență specializate cu expertiză profundă la RMO și în toată Europa de Est.',
+      s1_badge: 'Prioritate RMO', s1_title: 'Logistică AOG la RMO',
+      s1_desc: 'Manipulare AOG dedicată la Aeroportul Internațional Chișinău. Coordonare directă cu serviciile de sol — livrare fără întârzieri.',
+      s2_badge: 'Mondial', s2_title: 'Marfă Aeriană Express',
+      s2_desc: 'Expediere cu primul zbor disponibil pentru piese critice la nivel global. Cele mai rapide rute aeriene spre Moldova.',
+      s3_badge: 'UE–Moldova', s3_title: 'Transport Rutier Dedicat',
+      s3_desc: 'Transport rutier direct pe coridoarele UE–Moldova. Sigur, urmărit și expediat pentru urgența AOG.',
+      s4_badge: 'Bagaj de Mână', s4_title: 'Curier la Bord',
+      s4_desc: 'Curier dedicat însoțește fizic piesa critică pe aeronavă. Securitate maximă, fără întârzieri.',
+      why_tag: 'De ce UniversCargo',
+      why_h2a: 'Minutele contează.', why_h2b: 'Știm asta.',
+      why_sub: 'Când o aeronavă este la sol, fiecare oră costă mii. Echipa noastră reacționează imediat, comunică direct și livrează rezultate.',
+      why1_t: 'Reacție Imediată', why1_d: 'Răspuns în minute, nu ore. Echipa noastră AOG este în așteptare non-stop.',
+      why2_t: 'Soluții Flexibile', why2_d: 'Aer, drum, curier — alegem ruta cea mai rapidă. Soluții personalizate pentru fiecare AOG.',
+      why3_t: 'Comunicare Directă', why3_d: 'Un singur expert dedicat. Fără centre de apel. Mereu disponibil, mereu responsabil.',
+      why4_t: 'Echipă de Experți', why4_d: 'Profesioniști experimentați în logistică aviației cu ani de experiență la RMO și în Europa.',
+      stat_1: 'Livrare AOG la Timp', stat_2: 'Cazuri AOG Gestionate',
+      stat_3: 'Ani de Experiență', stat_4: 'Echipa AOG Online Acum',
+      partners_tag: 'Parteneri de Încredere', partners_title: 'Companii Aeriene Susținute',
+      cta_badge: 'Linie Fierbinte AOG Activă',
+      cta_h2a: 'Ai nevoie de suport AOG imediat', cta_h2b: 'în Moldova sau la RMO?',
+      cta_sub: 'Nu aștepta. Fiecare minut în care aeronava este la sol costă bani. Contactează echipa noastră acum.',
+      cc_phone: 'Telefon', cc_email: 'Email',
+      cta_btn_main: 'SUNĂ LINIA FIERBINTE AOG ACUM',
+      form_tag: 'Contact Rapid', form_h2: 'Obține Ofertă Urgentă',
+      form_sub: 'Completați detaliile — echipa noastră AOG răspunde în câteva minute.',
+      f_name: 'Nume Complet *', f_company: 'Companie *',
+      f_email: 'Email *', f_phone: 'Telefon / WhatsApp *', f_details: 'Detalii Expediere *',
+      f_name_ph: 'Ion Popescu', f_company_ph: 'Companie Aeriană / Operator',
+      f_email_ph: 'ops@airline.com', f_phone_ph: '+40 000 000 000',
+      f_details_ph: 'Tip aeronavă, număr piesă, origine, destinație, nivel urgență…',
+      f_submit: 'Trimite Cerere Urgentă',
+      f_privacy: 'Prin trimitere ești de acord să fii contactat de echipa noastră AOG. Date tratate confidențial.',
+      f_ok_title: 'Cerere Primită!', f_ok_sub: 'Echipa noastră AOG te va contacta în câteva minute.',
+      footer_desc: 'Logistică AOG de urgență pentru Moldova și Europa de Est. Disponibili 24/7 la Aeroportul Internațional Chișinău (RMO).',
+      footer_links_h: 'Link-uri Rapide', footer_l1: 'Servicii', footer_l2: 'De ce noi',
+      footer_l3: 'Contact', footer_emrg_h: 'Urgență AOG',
+      footer_operated: 'Operat de', footer_copy: '© 2024 aog.md · Toate Drepturile Rezervate',
+    }
+  };
+
+  let lang = 'en';
+
+  function setLang(l) {
+    lang = l;
+    // Update active button style
+    ['en','ru','ro'].forEach(code => {
+      document.getElementById('lang-' + code).classList.toggle('active', code === l);
+    });
+    // Translate text nodes
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (T[l][key] !== undefined) el.textContent = T[l][key];
+    });
+    // Translate placeholders
+    document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+      const key = el.getAttribute('data-i18n-ph');
+      if (T[l][key] !== undefined) el.placeholder = T[l][key];
+    });
+    document.documentElement.lang = l;
+  }
+
+  // ─────────────────────────────────────────────
+  //  SCROLL REVEAL
+  // ─────────────────────────────────────────────
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // ─────────────────────────────────────────────
+  //  NAVBAR SCROLL OPACITY
+  // ─────────────────────────────────────────────
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.style.background = window.scrollY > 60
+      ? 'rgba(4,9,15,0.98)'
+      : 'rgba(6,11,24,0.82)';
+  }, { passive: true });
+
+  // ─────────────────────────────────────────────
+  //  SMOOTH SCROLL for anchor links
+  // ─────────────────────────────────────────────
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (!target) return;
+      e.preventDefault();
+      const top = target.getBoundingClientRect().top + window.pageYOffset - 72;
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
+  });
+
+  // ─────────────────────────────────────────────
+  //  FORM SUBMIT (demo handler)
+  // ─────────────────────────────────────────────
+  function handleSubmit(e) {
+    e.preventDefault();
+    const form = document.getElementById('aog-form');
+    const success = document.getElementById('form-success');
+    form.classList.add('hidden');
+    success.classList.remove('hidden');
+    setTimeout(() => {
+      form.reset();
+      form.classList.remove('hidden');
+      success.classList.add('hidden');
+    }, 6000);
+  }
+
+  // ─────────────────────────────────────────────
+  //  INITIAL REVEALS (above-fold elements)
+  // ─────────────────────────────────────────────
+  window.addEventListener('load', () => {
+    document.querySelectorAll('.reveal').forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight) {
+        el.classList.add('visible');
+      }
+    });
+  });
+  </script>
+
+</body>
+</html>
