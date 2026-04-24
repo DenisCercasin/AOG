@@ -977,17 +977,29 @@
       <div class="card p-8 md:p-10 reveal" style="transition-delay:.08s;">
 
         <!-- The form -->
-        <form id="aog-form" onsubmit="handleSubmit(event)" class="space-y-5">
+        <form id="aog-form"
+              name="aog-urgent-quote"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              onsubmit="handleSubmit(event)"
+              class="space-y-5">
+          <input type="hidden" name="form-name" value="aog-urgent-quote">
+          <p class="hidden">
+            <label>
+              Don’t fill this out if you're human: <input name="bot-field" type="text" tabindex="-1" autocomplete="off">
+            </label>
+          </p>
 
           <div class="grid sm:grid-cols-2 gap-5">
             <div>
               <label class="block text-sm font-semibold text-gray-300 mb-2" data-i18n="f_name">Full Name *</label>
-              <input type="text" required autocomplete="name"
+              <input type="text" name="full_name" required autocomplete="name"
                      class="form-field" data-i18n-ph="f_name_ph" placeholder="John Smith">
             </div>
             <div>
               <label class="block text-sm font-semibold text-gray-300 mb-2" data-i18n="f_company">Company *</label>
-              <input type="text" required autocomplete="organization"
+              <input type="text" name="company" required autocomplete="organization"
                      class="form-field" data-i18n-ph="f_company_ph" placeholder="Airline / Operator">
             </div>
           </div>
@@ -995,19 +1007,19 @@
           <div class="grid sm:grid-cols-2 gap-5">
             <div>
               <label class="block text-sm font-semibold text-gray-300 mb-2" data-i18n="f_email">Email *</label>
-              <input type="email" required autocomplete="email"
+              <input type="email" name="email" required autocomplete="email"
                      class="form-field" data-i18n-ph="f_email_ph" placeholder="ops@airline.com">
             </div>
             <div>
               <label class="block text-sm font-semibold text-gray-300 mb-2" data-i18n="f_phone">Phone / WhatsApp *</label>
-              <input type="tel" required autocomplete="tel"
+              <input type="tel" name="phone_whatsapp" required autocomplete="tel"
                      class="form-field" data-i18n-ph="f_phone_ph" placeholder="+1 234 567 8900">
             </div>
           </div>
 
           <div>
             <label class="block text-sm font-semibold text-gray-300 mb-2" data-i18n="f_details">Shipment Details *</label>
-            <textarea required rows="4" class="form-field resize-none"
+            <textarea name="shipment_details" required rows="4" class="form-field resize-none"
                       data-i18n-ph="f_details_ph"
                       placeholder="Aircraft type, part number, origin, destination, urgency level…"></textarea>
           </div>
@@ -1369,19 +1381,42 @@
   });
 
   // ─────────────────────────────────────────────
-  //  FORM SUBMIT (demo handler)
+  //  FORM SUBMIT (Netlify)
   // ─────────────────────────────────────────────
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    const form = document.getElementById('aog-form');
+    const form = e.target;
     const success = document.getElementById('form-success');
-    form.classList.add('hidden');
-    success.classList.remove('hidden');
-    setTimeout(() => {
+    const submitButton = form.querySelector('button[type="submit"]');
+    const originalButtonHtml = submitButton.innerHTML;
+
+    submitButton.disabled = true;
+    submitButton.innerHTML = '<span>Sending...</span>';
+
+    try {
+      const formData = new FormData(form);
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString()
+      });
+
+      if (!response.ok) throw new Error('Submission failed');
+
+      form.classList.add('hidden');
+      success.classList.remove('hidden');
       form.reset();
-      form.classList.remove('hidden');
-      success.classList.add('hidden');
-    }, 6000);
+
+      setTimeout(() => {
+        form.classList.remove('hidden');
+        success.classList.add('hidden');
+      }, 6000);
+    } catch (error) {
+      alert('There was a problem sending your request. Please call or email us directly.');
+    } finally {
+      submitButton.disabled = false;
+      submitButton.innerHTML = originalButtonHtml;
+    }
   }
 
   // ─────────────────────────────────────────────
