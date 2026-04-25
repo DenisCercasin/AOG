@@ -23,9 +23,9 @@ export const handler = async (event) => {
     console.log("📤 Sending email to team...");
 
     const teamResponse = await resend.emails.send({
-      from: 'AOG Website <info@universcargo.md>',
+      from: 'UniversCargo AOG <aog@universcargo.md>',
       to: 'deniscercasin@gmail.com',
-      reply_to: email, // ⚠️ правильное поле (не replyTo!)
+      reply_to: email,
       subject: `Срочный AOG-запрос – ${company}`,
       text: `
 Получен новый AOG-запрос:
@@ -46,7 +46,7 @@ ${shipment_details}
     console.log("📤 Sending auto-response to client...");
 
     const clientResponse = await resend.emails.send({
-      from: 'UniversCargo AOG <info@universcargo.md>',
+      from: 'UniversCargo AOG <aog@universcargo.md>',
       to: email,
       subject: 'Ваш AOG-запрос получен',
       text: `
