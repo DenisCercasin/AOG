@@ -50,17 +50,17 @@ ${shipment_details}
       to: email,
       subject: 'Ваш AOG-запрос получен',
       text: `
-Здравствуйте, ${full_name}!
+Dear ${full_name},
 
-Спасибо за ваше обращение.
+Thank you for your request.
 
-Ваш AOG-запрос получен и уже обрабатывается нашей командой.
-Мы свяжемся с вами в ближайшее время.
+Your AOG inquiry has been successfully received and is currently being processed by our operations team.
+We will get back to you shortly.
 
-Если срочно — пожалуйста, свяжитесь с нами по телефону или WhatsApp.
+If your request is urgent, please feel free to contact us directly via phone or WhatsApp.
 
-С уважением,
-Команда AOG
+Best regards,
+AOG Team
       `
     });
 
