@@ -1390,28 +1390,25 @@
     submitButton.innerHTML = '<span>Sending...</span>';
 
     try {
-  const formData = new FormData(form);
-  const data = Object.fromEntries(formData.entries());
-  console.log("Submitting to function", data);
-  const response = await fetch('/.netlify/functions/send-email', {
-    method: 'POST',
-    body: JSON.stringify(data),
-  });
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+      console.log("Submitting to function", data);
+      const response = await fetch('/.netlify/functions/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
 
-  if (!response.ok) throw new Error('Submission failed');
+      if (!response.ok) throw new Error('Submission failed');
 
-  form.classList.add('hidden');
-  success.classList.remove('hidden');
-  form.reset();
-
-  setTimeout(() => {
-    form.classList.remove('hidden');
-    success.classList.add('hidden');
-  }, 6000);
-
-  } catch (error) {
-  alert('There was a problem sending your request. Please call or email us directly.');
-  }
+      form.classList.add('hidden');
+      success.classList.remove('hidden');
+      form.reset();
+    } catch (error) {
+      submitButton.disabled = false;
+      submitButton.innerHTML = originalButtonHtml;
+      alert('There was a problem sending your request. Please call or email us directly.');
+    }
   }
 
   // ─────────────────────────────────────────────
