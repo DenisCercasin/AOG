@@ -24,7 +24,7 @@ export const handler = async (event) => {
 
     const teamResponse = await resend.emails.send({
       from: 'UniversCargo AOG <aog@universcargo.md>',
-      to: 'deniscercasin@gmail.com',
+      to: 'info@universcargo.md',
       reply_to: email,
       subject: `Срочный AOG-запрос – ${company}`,
       text: `
