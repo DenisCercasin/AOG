@@ -3,8 +3,13 @@ import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const handler = async (event) => {
+  console.log("🔥 Function triggered");
+
   try {
+    console.log("📥 Raw body:", event.body);
+
     const data = JSON.parse(event.body);
+    console.log("✅ Parsed data:", data);
 
     const {
       full_name,
@@ -15,10 +20,12 @@ export const handler = async (event) => {
     } = data;
 
     // 📩 Email to Universcargo team
-    await resend.emails.send({
+    console.log("📤 Sending email to team...");
+
+    const teamResponse = await resend.emails.send({
       from: 'AOG Website <info@universcargo.md>',
       to: 'deniscercasin@gmail.com',
-      replyTo: email,
+      reply_to: email, // ⚠️ правильное поле (не replyTo!)
       subject: `Срочный AOG-запрос – ${company}`,
       text: `
 Получен новый AOG-запрос:
@@ -33,8 +40,12 @@ ${shipment_details}
       `
     });
 
-    // Auto-response to CLIENT
-    await resend.emails.send({
+    console.log("✅ Team email response:", teamResponse);
+
+    // ✉️ Auto-response to CLIENT
+    console.log("📤 Sending auto-response to client...");
+
+    const clientResponse = await resend.emails.send({
       from: 'UniversCargo AOG <info@universcargo.md>',
       to: email,
       subject: 'Ваш AOG-запрос получен',
@@ -53,12 +64,16 @@ ${shipment_details}
       `
     });
 
+    console.log("✅ Client email response:", clientResponse);
+
     return {
       statusCode: 200,
       body: JSON.stringify({ success: true })
     };
 
   } catch (error) {
+    console.error("❌ ERROR:", error);
+
     return {
       statusCode: 500,
       body: JSON.stringify({ error: error.message })
