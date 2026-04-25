@@ -48,7 +48,7 @@ ${shipment_details}
     const clientResponse = await resend.emails.send({
       from: 'UniversCargo AOG <aog@universcargo.md>',
       to: email,
-      subject: 'Ваш AOG-запрос получен',
+      subject: 'Your AOG request has been received',
       text: `
 Dear ${full_name},
 
